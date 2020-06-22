@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:elevation="8dp">
+            <android.support.v7.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:elevation="8dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textBMI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BMI(kg/m²):"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/black"/>
+                    <RelativeLayout
+                        android:id="@+id/layoutBMI"
+                        android:layout_below="@+id/textBMI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.anychart.AnyChartView
+                            android:id="@+id/any_chart_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/layoutBMI"
+                        android:id="@+id/textBMI1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đủ cân"
+                        android:textSize="15dp"
+                        android:textColor="@android:color/holo_red_light"/>
+                    <Button
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/textBMI1"
+                        android:id="@+id/btTesst"
+                        android:background="?android:selectableItemBackground"
+                        android:layout_margin="10dp"
+                        android:textColor="#2196F3"
+                        android:text="Chỉnh sửa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2000dp">
+                <CalendarView
+                    android:id="@+id/calenView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </android.support.v7.widget.CardView>
+            <ListView
+                android:layout_margin="10dp"
+                android:id="@+id/listviewHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+</ScrollView>
